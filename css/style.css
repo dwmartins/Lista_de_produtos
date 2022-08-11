@@ -1,0 +1,144 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --orange: #e47b0a;
+    --weakOrange: #ed8f0c;
+    --white: #ffff;
+    --weakGray: #f9f9fb;
+    --weakGray2: #adadad9d;
+    --darkGray: #303f4e;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
+
+.menu {
+    background-color: var(--weakOrange);
+    width: 170px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px 0;
+    padding-top: 30px;
+    position: fixed;
+    left: -170px;
+    transition: ease-in 0.3s; 
+}
+
+.menu a {
+    color: var(--weakGray);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu a:hover {
+    color: var(--darkGray);
+    transition: 0.3s;
+}
+
+.menu .add {
+    color: #009207;
+}
+
+.menu .lista {
+    color: #fff;
+}
+
+.menu .editar {
+    color: #255ec7;
+}
+
+.menu .deletar {
+    color: #ff0000;
+}
+
+.open_menu {
+    width: 80px;
+    height: 50px;
+    background-color:var(--weakOrange);
+    border-radius: 25px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: absolute;
+    top: 45%;
+    right: -35px;
+    cursor: pointer;
+}
+
+.open_menu i {
+    color: var(--weakGray);
+    font-size: 28px;
+    margin-right: 7px;
+}
+
+.menu.menu_aberto {
+    left: 0px;
+}
+
+.layout {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--weakGray);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout h1 {
+    font-size: 34px;
+    color: var(--orange);
+    margin-bottom: 40px;
+}
+
+.layout form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    background-color: var(--darkGray);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.layout label {
+    color: var(--orange);
+    font-weight: bold;
+}
+
+.layout input {
+    width: 100%;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px 0 15px 0;
+    font-size: 16px;
+    padding: 5px;
+}
+
+.layout input:focus {
+    outline: none;
+}
+
+.layout button {
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--weakOrange);
+    border: none;
+    border-radius: 5px;
+    color: var(--weakGray);
+    cursor: pointer;
+}
+
+
+.layout button:hover {
+    background-color: var(--orange);
+    transition: 0.3s;
+}
