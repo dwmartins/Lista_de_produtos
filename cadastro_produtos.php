@@ -8,8 +8,8 @@ if (count($_POST) > 0) {
     $quantidade = $_POST['quantidade'];
     $valor = $_POST['valor'];
 
-    $sql_code = "INSERT INTO produtos (produto, quantidade, valor, data)
-        VALUES ('$produto', '$quantidade', '$valor', NOW())";
+    $sql_code = "INSERT INTO produtos (produto, quantidade, data)
+        VALUES ('$produto', '$quantidade', NOW())";
     $deu_certo = $mysqli->query($sql_code) or die($mysqli->error);
     if ($deu_certo) {
         echo "produto cadastrado com sucesso!";
@@ -36,38 +36,40 @@ if (count($_POST) > 0) {
 
     <section class="Cadastro_produtos">
         <div class="menu">
-            <a href="lista_produtos.php">Lista de produtos <i class="fa-solid fa-list-ol lista"></i> </a>
-            <a href="cadastro_produtos.php">Cadastrar produto <i class="fa-solid fa-circle-plus add"></i></a>
-            <a href="editar_produto.php">Editar produto <i class="fa-solid fa-file-pen editar"></i></a>
-            <a href="deletar_produto.php">Deletar produto <i class="fa-solid fa-delete-left deletar"></i></a>
+            <a href="lista_produtos.php"><i class="fa-solid fa-list-ol lista"></i> Lista de produtos </a>
+            <a href="cadastro_produtos.php"><i class="fa-solid fa-circle-plus add"></i> Cadastrar produto </a>
+            <a href="editar_produto.php"><i class="fa-solid fa-file-pen editar"></i> Editar produto </a>
+            <a href="deletar_produto.php"><i class="fa-solid fa-delete-left deletar"></i> Deletar produto </a>
 
             <div class="open_menu">
-                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                <i class="fa-solid fa-arrow-right-to-bracket btn-open-menu"></i>
             </div>
         </div>
 
         <div class="layout">
-            <h1>Cadastrar produtos:</h1>
 
             <form action="" method="POST">
+
+                <h1>Cadastrar produtos:</h1>
+
                 <label>Produto:</label>
                 <input type="text" name="produto" id="produto">
 
                 <label>Quantidade:</label>
-                <input type="text" name="quantidade" id="quantidade">
+                <input type="number" name="quantidade" id="quantidade">
 
-                <label>Valor:</label>
-                <input type="text" name="valor" id="valor">
+                <div id="msgErro"></div>
 
-                <button type="submit">Salvar</button>
+                <button id="BtnSubmit" type="submit">Salvar</button>
 
             </form>
 
         </div>
     </section>
 
-
+    
     <script src="./js/menu.js"></script>
+    <script src="./js/form.js"></script>
 </body>
 
 </html>
