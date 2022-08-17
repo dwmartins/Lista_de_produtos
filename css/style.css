@@ -16,18 +16,16 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap');
 
-
-/* Pagina de cadastro de produtos */
 .menu {
     background-color: var(--weakOrange);
-    width: 190px;
+    width: 220px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px 0;
-    padding: 30px 5px;
+    padding: 30px 10px;
     position: fixed;
-    left: -190px;
+    left: -220px;
     transition: ease-in 0.3s; 
 }
 
@@ -39,6 +37,7 @@
     color: var(--weakGray);
     text-decoration: none;
     font-weight: bold;
+    font-size: 18px;
 }
 
 .menu a:hover {
@@ -65,7 +64,7 @@
     cursor: pointer;
 }
 .menu .btn-open-menu {
-    color: var(--weakGray);
+    color: var(--darkGray);
     font-size: 28px;
     margin-right: 7px;
 }
@@ -74,6 +73,7 @@
     transform: rotate(180deg);
 }
 
+/* Pagina de cadastro de produtos */
 .layout {
     width: 100%;
     height: 100vh;
@@ -85,8 +85,8 @@
 }
 
 .layout h1 {
-    font-size: 34px;
-    color: var(--white);
+    font-size: 30px;
+    color: var(--orange);
     margin-bottom: 40px;
 }
 
@@ -101,7 +101,7 @@
 }
 
 .layout label {
-    color: var(--orange);
+    color: var(--weakGray);
     font-weight: bold;
     margin-bottom: 3px;
 }
@@ -146,5 +146,10 @@
     font-weight: bold;
     color: #f82a2a;
 }
-
 /* Fim da pagina de cadastro */
+
+/* Pagina de lista de produtos */
+
+table, thead, tbody, th, td {
+    border: 1px solid gray;
+}

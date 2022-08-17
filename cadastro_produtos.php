@@ -6,7 +6,6 @@ if (count($_POST) > 0) {
 
     $produto = $_POST['produto'];
     $quantidade = $_POST['quantidade'];
-    $valor = $_POST['valor'];
 
     $sql_code = "INSERT INTO produtos (produto, quantidade, data)
         VALUES ('$produto', '$quantidade', NOW())";
@@ -36,13 +35,13 @@ if (count($_POST) > 0) {
 
     <section class="Cadastro_produtos">
         <div class="menu">
-            <a href="lista_produtos.php"><i class="fa-solid fa-list-ol lista"></i> Lista de produtos </a>
-            <a href="cadastro_produtos.php"><i class="fa-solid fa-circle-plus add"></i> Cadastrar produto </a>
-            <a href="editar_produto.php"><i class="fa-solid fa-file-pen editar"></i> Editar produto </a>
-            <a href="deletar_produto.php"><i class="fa-solid fa-delete-left deletar"></i> Deletar produto </a>
+            <a href="lista_produtos.php"><i class="fa-solid fa-list-ol "></i> Lista de produtos </a>
+            <a href="cadastro_produtos.php"><i class="fa-solid fa-file-circle-plus"></i>Cadastrar produto </a>
+            <a href="editar_produto.php"><i class="fa-solid fa-file-pen "></i> Editar produto </a>
+            <a href="deletar_produto.php"><i class="fa-solid fa-trash-can"></i> Deletar produto </a>
 
             <div class="open_menu">
-                <i class="fa-solid fa-arrow-right-to-bracket btn-open-menu"></i>
+                <i class="fa-solid fa-angles-right btn-open-menu"></i>
             </div>
         </div>
 
